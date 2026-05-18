@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stunning Image Gallery</title>
+    <meta name="description" content="A premium responsive image gallery with category filtering and lightbox navigation.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="gallery-header">
+        <h1>Discover The World</h1>
+        <p>A curated collection of nature, architecture, and technology</p>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+    </div>
+
+    <main class="gallery-container">
+        <div class="gallery-item" data-category="nature" data-index="0">
+            <div class="image-wrapper">
+                <img src="images/nature_1.png" alt="Mountain landscape at sunset">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Majestic Peaks</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-index="1">
+            <div class="image-wrapper">
+                <img src="images/architecture_1.png" alt="Modern glass skyscraper">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Urban Heights</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="technology" data-index="2">
+            <div class="image-wrapper">
+                <img src="images/technology_1.png" alt="Quantum computer setup">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Quantum Core</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="nature" data-index="3">
+            <div class="image-wrapper">
+                <img src="images/nature_2.png" alt="Rainforest waterfall">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Hidden Falls</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-index="4">
+            <div class="image-wrapper">
+                <img src="images/architecture_2.png" alt="Historical castle on cliff">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Ancient Fortress</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="technology" data-index="5">
+            <div class="image-wrapper">
+                <img src="images/technology_2.png" alt="Sci-fi drone over city">
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">Neon Watcher</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" src="" alt="Lightbox image">
+            <div class="lightbox-caption"></div>
+        </div>
+        <button class="nav-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
